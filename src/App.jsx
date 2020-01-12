@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useSpring, animated, config } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
-import SyntaxHiglighter from 'react-syntax-highlighter';
-import shades_of_purple from 'react-syntax-highlighter/dist/esm/styles/hljs/shades-of-purple'
+// import SyntaxHiglighter from 'react-syntax-highlighter';
+// import shades_of_purple from 'react-syntax-highlighter/dist/esm/styles/hljs/shades-of-purple'
 import './sass/App.scss';
 
 function PermissionButton({ enabled, setPermission, permissionType, colour }) {
