@@ -1,0 +1,152 @@
+$light-blue: #b2ebf2;
+$light-green: #c8e6c9;
+$light-purple: #d1c4e9;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,600,700&display=swap');
+
+html,
+body,
+#root {
+    height: 100%;
+    font-family: 'Raleway';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway';
+    color: #37474f;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #62727b;
+}
+
+p > code {
+    font-family: "source-code-pro", "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+    background-color: rgba(black, 0.05);
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(black, 0.1);
+}
+
+$base: #f1f3f6;
+
+
+body {
+	background-color: $base;
+}
+
+.App {
+	text-align: center;
+	padding: 0.5% 5%;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.flex {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.buttonGroup-container {
+    border-radius: 15px;
+    padding: 6px 12px;
+    margin: 6px;
+
+    
+    .buttonGroup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    h3 {
+        margin: 0;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        font-weight: 900;
+        font-size: 1em;
+    }
+    
+    &-light-purple {
+        background-color: $light-purple;
+        h3 {
+            color: darken($light-purple, 55%);
+        }
+    }
+    &-light-blue {
+        background-color: $light-blue;
+        h3 {
+            color: darken($light-blue, 55%);
+        }
+    }
+    &-light-green {
+        background-color: $light-green;
+        h3 {
+            color: darken($light-green, 55%);
+        }
+    }
+}
+
+.softButton {
+	$shadowOffset: 4px;
+    $shadowBlur: 8px;
+	border-radius: 10px;
+	user-select: none;
+	padding: 4px 12px;
+	margin: 12px;
+	border: 1px solid rgba(#e6e6e6, 0.01);
+	font-size: 1.4em;
+	font-weight: 700;
+	width: 30px;
+	height: 30px;
+    box-sizing: content-box;
+    
+    
+    &-light-blue {
+        background-color: $light-blue;
+        box-shadow: $shadowOffset $shadowOffset $shadowBlur rgba(darken($light-blue, 20%), 0.4),
+        -1 * $shadowOffset -1 * $shadowOffset $shadowBlur rgba(lighten($light-blue, 10%), 0.7),
+        inset $shadowOffset $shadowOffset $shadowBlur rgba(lighten($light-blue, 5%), 0.5);
+        color: darken($light-blue, 45%);
+    }
+    &-light-green {
+        background-color: $light-green;
+        box-shadow: $shadowOffset $shadowOffset $shadowBlur rgba(darken($light-green, 20%), 0.4),
+        -1 * $shadowOffset -1 * $shadowOffset $shadowBlur rgba(lighten($light-green, 10%), 0.7),
+        inset $shadowOffset $shadowOffset $shadowBlur rgba(lighten($light-green, 5%), 0.5);
+        color: darken($light-green, 45%);
+    }
+    &-light-purple {
+        background-color: $light-purple;
+        box-shadow: $shadowOffset $shadowOffset $shadowBlur rgba(darken($light-purple, 20%), 0.4),
+            -1 * $shadowOffset -1 * $shadowOffset $shadowBlur rgba(lighten($light-purple, 10%), 0.7),
+            inset $shadowOffset $shadowOffset $shadowBlur rgba(lighten($light-purple, 5%), 0.5);
+        color: darken($light-purple, 45%);
+    }
+}
+
+
+.outputNumbers {
+    &-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    &-number {
+        background-color: #333;
+        border-radius: 6px;
+        color: #f3f3f3;
+        font-size: 2.4em;
+        font-weight: 500;
+        padding: 6px 10px;
+        margin: 0px 2px;
+        font-family: 'IBM Plex Mono';
+    }
+}
